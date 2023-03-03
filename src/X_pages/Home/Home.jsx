@@ -3,6 +3,24 @@ import "./Home.css";
 
 import Footer from "../../Components_hub/Footer/Footer.jsx";
 
+const style_marquee = {
+  "--pause-on-hover": "paused",
+  "--pause-on-click": "running",
+};
+
+const style_anime = {
+  play: "running",
+  direction: "normal",
+  duration: "11.88s",
+  delay: "0s",
+  "iteration-count": "infinite",
+};
+
+const style_color = {
+  "--gradient-color": "rgba(255, 255, 255, 1),rgba(255, 255, 255, 0)",
+  "--gradient-width": "20px",
+};
+
 const Home = () => {
   return (
     <>
@@ -13,19 +31,27 @@ const Home = () => {
             className="carousel slide"
             data-bs-ride="carousel"
           >
-            <div className="carousel-inner">
-              <div className="carousel-item active b1" data-bs-interval="50">
+            <div className="carousel-inner dimension">
+              <div className="carousel-item active b1" data-bs-interval="3000">
                 <img
-                  //   src={require("./Home_images/logo192.png")}
-                  className="d-block w-100"
+                  src={require("./Home_images/campusA1.jpg")}
+                  className="d-block w-100 h-10"
                   alt="sdcdcs"
                 />
               </div>
-              <div className="carousel-item b1" data-bs-interval="50">
-                {/* <img src={require('../images/banner2.jpg')} className="d-block w-100" alt="..." /> */}
+              <div className="carousel-item b1" data-bs-interval="3000">
+                <img
+                  src={require("./Home_images/campusA3.jpg")}
+                  className="d-block w-100 "
+                  alt="..."
+                />
               </div>
               <div className="carousel-item b1">
-                {/* <img src={require('../images/banner3.jpg')} className="d-block w-100" alt="..." /> */}
+                <img
+                  src={require("./Home_images/campusA2.jpg")}
+                  className="d-block w-100 "
+                  alt="..."
+                />
               </div>
             </div>
 
@@ -63,20 +89,21 @@ const Home = () => {
               <div className="col p-4 d-flex flex-column position-static">
                 <h1>
                   <strong className="d-inline-block mb-2 text-primary">
-                    PCOS
+                    Campus-A
                   </strong>
                 </h1>
                 <p className="card-text mb-auto">
-                  It is a condition in which the ovaries produce an abnormal
-                  amount of androgens, male sex hormones that are usually
-                  present in women in small amounts.
+                  <li>New Boys</li>
+                  <li>Kelat</li>
+                  <li>kacchi colony waala</li>
+                  <li>Berozgaaro waala</li>
                 </p>
               </div>
               {/* <div className="col-auto d-none d-lg-block"> */}
               <div className="col-auto d-none d-lg-block img-fluid ">
                 <img
                   className="responsive"
-                  src="https://source.unsplash.com/200x300/?hospital"
+                  src={require("./Home_images/1.jpg")}
                   alt=""
                 />
               </div>
@@ -87,20 +114,21 @@ const Home = () => {
               <div className="col p-4 d-flex flex-column position-static">
                 <h1>
                   <strong className="d-inline-block mb-2 text-success">
-                    Diabetes
+                    Campus-B
                   </strong>
                 </h1>
 
                 <br />
                 <p className="mb-auto">
-                  Diabetes is a chronic (long-lasting) health condition that
-                  affects how your body turns food into energy
+                  <li>FRK</li>
+                  <li>SRK</li>
+                  <li>BRA</li>
                 </p>
               </div>
               <div className="col-auto d-none d-lg-block img-fluid ">
                 <img
                   className="responsive"
-                  src="https://source.unsplash.com/200x300/?diabetes"
+                  src={require("./Home_images/logo.jpg")}
                   alt=""
                 />
               </div>
@@ -116,12 +144,16 @@ const Home = () => {
                 className="hostel-logo"
               />
             </span>
-            <span className="hostel-name ml-2">kailash Hostel</span>
+            <span className="hostel-name ml-2">
+              <h1>Hostel</h1>
+            </span>
           </div>
           <div className="container-fluid">
             <div className="row">
               <div className="col mb-3">
-                <div className="col-heading mb-2">Social</div>
+                <div className="col-heading mb-2">
+                  <h3>Social</h3>
+                </div>
                 <a
                   href="https://instagram.com/kailash.iitd?utm_medium=copy_link"
                   className="social mr-3"
@@ -144,7 +176,9 @@ const Home = () => {
                 </a>
               </div>
               <div className="col mb-4">
-                <div className="col-heading mb-2">Complain</div>
+                <div className="col-heading mb-2">
+                  <h3>Complain</h3>
+                </div>
                 <button type="button" className="btn complain">
                   <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLSf7dUoNH8B8wCl1Gztt8yF73NdXx3u8LnE6RwWy8MPFqmv_nA/viewform"
@@ -156,10 +190,12 @@ const Home = () => {
                 </button>
               </div>
               <div className="col mb-1">
-                <div className="col-heading mb-1">Location</div>
+                <div className="col-heading mb-1">
+                  <h3>Location</h3>
+                </div>
                 <iframe
                   className="map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.78546330218!2d77.19074771500702!3d28.546167482451967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3354fd0c463%3A0x79006e1186fbb0ab!2sKailash%20Hostel%20Lawn!5e0!3m2!1sen!2sin!4v1640604803786!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.1336181698575!2d77.27824811744384!3d28.56575009999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3a574f24cb1%3A0xb07903a53c4f3db!2sNew%20Boys%20Hostel%20-%20JMI!5e0!3m2!1sen!2sin!4v1677773482807!5m2!1sen!2sin"
                   allowfullscreen=""
                 ></iframe>
               </div>
@@ -214,32 +250,27 @@ const Home = () => {
 
         <div className="chiefs">
           <div className="container py-5">
-            <div className="heading">
-              <h2>Student Team</h2>
-            </div>
-            <div className=" marquee-container">
-              <div
-                className="overlay"
-                // style={{--gradient-color:rgba(255, 255, 255, 1), rgba(255, 255, 255, 0); --gradient-width:20px;}}
-              ></div>
-              <div
-                className="marquee"
-                // style={"--play:running; --direction:normal; --duration:11.88s; --delay:0s; --iteration-count:infinite;"}
-              >
+            <div className="heading">Student Team</div>
+            <div
+              className=" marquee-container my-element my-button:active "
+              style={style_marquee}
+            >
+              <div className="overlay" style={style_color}></div>
+              <div className="marquee" style={style_anime}>
                 <div className="d-flex mb-5 mt-3">
                   <div className="mx-5">
                     <div className="profile-card my-5">
                       <div
                         className="profile-image"
-                        // style="height: 300px; width: 300px;"
+                        style={{ height: "300px", width: "300px" }}
                       >
                         <img
-                          src="/static/media/house.5d44e32f.webp"
+                          src={require("./Home_images/img.jpg")}
                           alt=""
                           className="profile-img-blur h-100"
                         />
                         <img
-                          src="/static/media/house.5d44e32f.webp"
+                          src={require("./Home_images/img.jpg")}
                           alt=""
                           className="profile-img-main h-100"
                         />
@@ -279,15 +310,15 @@ const Home = () => {
                     <div className="profile-card my-5">
                       <div
                         className="profile-image"
-                        // style={"height: 300px; width: 300px;"}
+                        style={{ height: "300px", width: "300px" }}
                       >
                         <img
-                          src="/static/media/maint.597ed8a6.webp"
+                          src={require("./Home_images/img.jpg")}
                           alt=""
                           className="profile-img-blur h-100"
                         />
                         <img
-                          src="/static/media/maint.597ed8a6.webp"
+                          src={require("./Home_images/img.jpg")}
                           alt=""
                           className="profile-img-main h-100"
                         />
@@ -327,15 +358,15 @@ const Home = () => {
                     <div className="profile-card my-5">
                       <div
                         className="profile-image"
-                        // style={"height: 300px; width: 300px;"}
+                        style={{ height: "300px", width: "300px" }}
                       >
                         <img
-                          src="/static/media/mess.5ad3fec0.webp"
+                          src={require("./Home_images/img.jpg")}
                           alt=""
                           className="profile-img-blur h-100"
                         />
                         <img
-                          src="/static/media/mess.5ad3fec0.webp"
+                          src={require("./Home_images/img.jpg")}
                           alt=""
                           className="profile-img-main h-100"
                         />
@@ -373,24 +404,21 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div
-                className="marquee"
-                // style={"--play:running; --direction:normal; --duration:11.88s; --delay:0s; --iteration-count:infinite;"}
-              >
+              <div className="marquee" style={style_anime}>
                 <div className="d-flex mb-5 mt-3">
                   <div className="mx-5">
                     <div className="profile-card my-5">
                       <div
                         className="profile-image"
-                        // style={"height: 300px; width: 300px;"}
+                        style={{ height: "300px", width: "300px" }}
                       >
                         <img
-                          src="/static/media/house.5d44e32f.webp"
+                          src={require("./Home_images/img.jpg")}
                           alt=""
                           className="profile-img-blur h-100"
                         />
                         <img
-                          src="/static/media/house.5d44e32f.webp"
+                          src={require("./Home_images/img.jpg")}
                           alt=""
                           className="profile-img-main h-100"
                         />
@@ -430,15 +458,15 @@ const Home = () => {
                     <div className="profile-card my-5">
                       <div
                         className="profile-image"
-                        // style={"height: 300px; width: 300px;"}
+                        style={{ height: "300px", width: "300px" }}
                       >
                         <img
-                          src="/static/media/maint.597ed8a6.webp"
+                          src={require("./Home_images/img.jpg")}
                           alt=""
                           className="profile-img-blur h-100"
                         />
                         <img
-                          src="/static/media/maint.597ed8a6.webp"
+                          src={require("./Home_images/img.jpg")}
                           alt=""
                           className="profile-img-main h-100"
                         />
@@ -478,15 +506,15 @@ const Home = () => {
                     <div className="profile-card my-5">
                       <div
                         className="profile-image"
-                        // style={"height: 300px; width: 300px;"}
+                        style={{ height: "300px", width: "300px" }}
                       >
                         <img
-                          src="/static/media/mess.5ad3fec0.webp"
+                          src={require("./Home_images/img.jpg")}
                           alt=""
                           className="profile-img-blur h-100"
                         />
                         <img
-                          src="/static/media/mess.5ad3fec0.webp"
+                          src={require("./Home_images/img.jpg")}
                           alt=""
                           className="profile-img-main h-100"
                         />
@@ -528,6 +556,51 @@ const Home = () => {
           </div>
         </div>
 
+        <div className="team-container">
+          <div className="team-member">
+            <h3>Team Member 1</h3>
+            <p>
+              Contact:{" "}
+              <a href="mailto:member1@example.com">member1@example.com</a>
+            </p>
+          </div>
+          <div className="team-member">
+            <h3>Team Member 2</h3>
+            <p>
+              Contact:{" "}
+              <a href="mailto:member2@example.com">member2@example.com</a>
+            </p>
+          </div>
+          <div className="team-member">
+            <h3>Team Member 3</h3>
+            <p>
+              Contact:{" "}
+              <a href="mailto:member3@example.com">member3@example.com</a>
+            </p>
+          </div>
+          <div className="team-member">
+            <h3>Team Member 4</h3>
+            <p>
+              Contact:{" "}
+              <a href="mailto:member4@example.com">member4@example.com</a>
+            </p>
+          </div>
+          <div className="team-member">
+            <h3>Team Member 5</h3>
+            <p>
+              Contact:{" "}
+              <a href="mailto:member5@example.com">member5@example.com</a>
+            </p>
+          </div>
+          <div className="team-member">
+            <h3>Team Member 6</h3>
+            <p>
+              Contact:{" "}
+              <a href="mailto:member6@example.com">member6@example.com</a>
+            </p>
+          </div>
+        </div>
+
         <div id="mess-menu" className="container-fluid my-5">
           <div className="heading pb-4">Mess Menu</div>
           <div className="container menu my-2 text-center">
@@ -535,32 +608,32 @@ const Home = () => {
             <div className="row text-center">
               <div className="col-0 col-lg-2"></div>
               <div className="col p-0 mb-3">
-                <a className="link1 active" href="/hostel/kailash/">
+                <a className="link1 active" href="/">
                   Monday
                 </a>
               </div>
               <div className="col p-0 mb-3">
-                <a className="link1" href="/hostel/kailash/">
+                <a className="link1" href="/">
                   Tuesday
                 </a>
               </div>
               <div className="col p-0 mb-3">
-                <a className="link1" href="/hostel/kailash/">
+                <a className="link1" href="/">
                   Wednesday
                 </a>
               </div>
               <div className="col p-0 mb-3">
-                <a className="link1" href="/hostel/kailash/">
+                <a className="link1" href="/">
                   Thursday
                 </a>
               </div>
               <div className="col p-0 mb-3">
-                <a className="link1" href="/hostel/kailash/">
+                <a className="link1" href="/">
                   Friday
                 </a>
               </div>
               <div className="col p-0 mb-3">
-                <a className="link1" href="/hostel/kailash/">
+                <a className="link1" href="/">
                   Saturday
                 </a>
               </div>
@@ -617,7 +690,7 @@ const Home = () => {
                     </div>
                     <div className="meal-time mt-2">04:30 PM - 05:30 PM </div>
                     <div className="mess-items mt-2 font-size-smaller">
-                      Tea, bread, jam
+                      Tea, bread, jam,Tea, bread, jam,Tea, bread, jam
                     </div>
                   </div>
                 </div>
@@ -1021,6 +1094,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <Footer />
     </>
   );

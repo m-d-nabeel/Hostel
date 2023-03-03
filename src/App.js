@@ -6,6 +6,7 @@ import SeatAlloc  from './X_pages/SeatAlloc/SeatAlloc';
 import Contact from './X_pages/Contact/Contact';
 import Rules from './X_pages/Rules/Rules';
 import Fee from './X_pages/Fee/Fee';
+import Faq from './X_pages/Faq/Faq';
 
 
 
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
   {
     path: "/Fee",
     element: <Fee />,
+  },
+  {
+    path: "/Faq",
+    element: <Faq />,
   },
 ]);
 
