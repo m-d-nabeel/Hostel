@@ -181,7 +181,8 @@ const Home = () => {
                 </div>
                 <button type="button" className="btn complain">
                   <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSf7dUoNH8B8wCl1Gztt8yF73NdXx3u8LnE6RwWy8MPFqmv_nA/viewform"
+                    // href="https://docs.google.com/forms/d/e/1FAIpQLSf7dUoNH8B8wCl1Gztt8yF73NdXx3u8LnE6RwWy8MPFqmv_nA/viewform"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScYMprPlonKV1-aiTVG9hbVGch2qPv03k1wojDiD1jVQtmUtA/viewform?usp=sf_link"
                     className="complain_link"
                     target="_blank"
                   >
@@ -241,11 +242,15 @@ const Home = () => {
           IIT Delhi.
         </div>
         <div className="container py-5">
-          <div className="heading pb-4">
-            <h2> Vision</h2>
+          <div className="heading pb-4 vision">
+            <h1> Vision</h1>
+            <p>
+            To cater all the needs of its residents to make them feel Kailash like
+           their second home and take the hostel culture to the sky.
+          </p>
           </div>
-          To cater all the needs of its residents to make them feel Kailash like
-          their second home and take the hostel culture to the sky.
+          
+         
         </div>
 
         <div className="chiefs">
